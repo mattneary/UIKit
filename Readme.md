@@ -98,10 +98,12 @@ Documentation - Controllers
 ===========================
 UIViewController
 ----------------
+- __(UIViewController) constructor: function() {}__
 - (UIView) viewWillLoad: function(view) {}
 
 UISplitViewController
 ---------------------
+- __(UISplitViewController) constructor: function() {}__
 - (UIView) viewWillLoad: function(view) {}
 - (UIView) willInsertLeftView: function(left) {}
 - (UIView) willInsertRightView: function(right) {}
@@ -110,6 +112,7 @@ UISplitViewController
 
 UITableViewController
 ---------------------
+- __(UITableViewController) constructor: function() {}__
 - (UIView) viewWillLoad: function(view) {}
 - (Integer) numberOfSections: function(tableview) {}
 - (Integer) numberOfCellsForSection: function(sectionIndex, tableview) {}
@@ -120,14 +123,15 @@ UINavigationViewController
 --------------------------
 - TODO
 
-UITabBarViewController
-----------------------
+UITabBarController
+------------------
 - TODO
 
 Documentation - Views
 =====================
 UIView
 ------
+- __(UIView) constructor: function() {}__
 - (UIView) appendToView: function(targetView) {}
 - (void) init
 - (UIView) sub: function(cb) {}
@@ -135,6 +139,7 @@ UIView
 
 UISplitView
 -----------
+- __(UISplitView) constructor: function() {}__
 - (Element) view
 - (void) init
 - (UIView) rightView
@@ -144,6 +149,7 @@ UISplitView
 
 UITableView
 -----------
+- __(UITableView) constructor: function() {}__
 - (Element) view
 - (void) init
 - (UITableViewController) delegate
@@ -152,6 +158,7 @@ UITableView
 
 UITableViewCell
 ---------------
+- __(UITableViewCell) constructor: function(textContent) {}__
 - (Element) view
 - (void) init
 
@@ -161,6 +168,7 @@ UINavigationView
 
 UINavigationBarView
 -------------------
+- __(UINavigationBarView) constructor: function(barTitle) {}__
 - (Element) view
 - (void) init
 
