@@ -12,7 +12,8 @@ define(["./Foundation", "./UIView", "./UINavigationBar", "./UITableView", "./Mas
 				table.delegate.mySplitViewController = this;
 				
 				(new UINavigationBar("Title")).appendToView(left);
-				table.init().appendToView(left);
+				table.init();
+				table.appendToView(left);
 				table.view.stylize({
 					margin: 0,
 					padding: 0,
