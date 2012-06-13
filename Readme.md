@@ -129,11 +129,11 @@ UIView
 - (UIView) appendToView: function(targetView) {}
 - (void) init
 - (UIView) sub: function(cb) {}
-- (HTMLElement) view
+- (Element) view
 
 UISplitView
 -----------
-- (HTMLElement) view
+- (Element) view
 - (void) init
 - (UIView) rightView
 - (UIView) leftView 
@@ -142,7 +142,7 @@ UISplitView
 
 UITableView
 -----------
-- (HTMLElement) view
+- (Element) view
 - (void) init
 - (UITableViewController) delegate
 - (void) reloadData
@@ -150,7 +150,7 @@ UITableView
 
 UITableViewCell
 ---------------
-- (HTMLElement) view
+- (Element) view
 - (void) init
 
 UINavigationView
@@ -159,7 +159,7 @@ UINavigationView
 
 UINavigationBarView
 -------------------
-- (HTMLElement) view
+- (Element) view
 - (void) init
 
 UITabBarView
