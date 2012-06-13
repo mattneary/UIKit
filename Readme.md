@@ -104,14 +104,14 @@ Getting Started
 	
 Documentation - Controllers
 ===========================
+- Note that Controllers are not explicitly declared but should implement stated protocols.
+
 UIViewController
 ----------------
-- __(UIViewController) constructor: function() {}__
 - (UIView) viewWillLoad: function(view) {}
 
 UISplitViewController
 ---------------------
-- __(UISplitViewController) constructor: function() {}__
 - (UIView) viewWillLoad: function(view) {}
 - (UIView) willInsertLeftView: function(left) {}
 - (UIView) willInsertRightView: function(right) {}
@@ -120,7 +120,6 @@ UISplitViewController
 
 UITableViewController
 ---------------------
-- __(UITableViewController) constructor: function() {}__
 - (UIView) viewWillLoad: function(view) {}
 - (Integer) numberOfSections: function(tableview) {}
 - (Integer) numberOfCellsForSection: function(sectionIndex, tableview) {}
