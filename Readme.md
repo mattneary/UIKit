@@ -92,27 +92,65 @@ Getting Started
 			});		
 		});
 	
-Documentation
-=============
+Documentation - Controllers
+===========================
 UIViewController
 ----------------
-
+- (UIView) viewWillLoad: function(view) {}
 UISplitViewController
 ---------------------
+- (UIView) viewWillLoad: function(view) {}
 - (UIView) willInsertLeftView: function(left) {}
 - (UIView) willInsertRightView: function(right) {}
 - (UIView) willInsertMiddleView: function(middle) {}
 - (UISplitView) mySplitView
-
 UITableViewController
 ---------------------
+- (UIView) viewWillLoad: function(view) {}
 - (Integer) numberOfSections: function(tableview) {}
 - (Integer) numberOfCellsForSection: function(sectionIndex, tableview) {}
 - (UITableViewCell) cellAtIndex: function(sectionIndex, cellIndex, tableview) {}
 - (void) didSelectCell: function(cellIndex) {}
-
 UINavigationViewController
 --------------------------
-
-UITabBarController
-------------------
+- TODO
+UITabBarViewController
+----------------------
+- TODO
+Documentation - Views
+=====================
+UIView
+------
+- (UIView) appendToView: function(targetView) {}
+- (void) init
+- (UIView) sub: function(cb) {}
+- (HTMLElement) view
+UISplitView
+-----------
+- (HTMLElement) view
+- (void) init
+- (UIView) rightView
+- (UIView) leftView 
+- (UIView) middleView
+- (UISplitViewController) delegate
+UITableView
+-----------
+- (HTMLElement) view
+- (void) init
+- (UITableViewController) delegate
+- (void) reloadData
+- (UITableView) init
+UITableViewCell
+---------------
+- (HTMLElement) view
+- (void) init
+UINavigationView
+----------------
+- TODO
+UINavigationBarView
+-------------------
+- (HTMLElement) view
+- (void) init
+UITabBarView
+------------
+- TODO
