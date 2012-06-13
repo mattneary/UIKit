@@ -169,10 +169,15 @@ UITabBarView
 Subclassing Views
 =================
 - include dependencies in a requirejs module
+
 		define(["./Foundation", "./UIView"], function($, UIView) {		
+
 - declare a  constructor for your class
+
 			var UISplitView = function() {
+
 - extend the instance with and method or property instance variables.
+
 				$.extend(this, {
 					view: $.Element("div"),
 					rightView: section(side_length+"px", "right"), 
@@ -181,29 +186,38 @@ Subclassing Views
 					delegate: null
 				});
 			}
+
 - create a prototype with any class methods you would like to add or modify. Note that when modifying the init method, a backup of the default should be fired.
+
 			UISplitView.prototype = {
 				init: function() {
 					this._init();	//init super: fires viewWillLoad on delegate
 					//do other shit
 				}
 			};
+
 - extend the prototype with that of a parent class for inheritance, values will not be overwritten.
+
 			$.extend(UISplitView.prototype, UIView.prototype);
+
 - return the constructor (i.e., class) as the requirejs module
+
 			return UISplitView;
 		});
 
 Following View Controller Protocols
 ===================================
 - the view controller constructor should add instance methods that can be called by the view which it controls.
+
 		var MasterViewController = function() {
 			var cellObjects = ["lorum", "ipsum", "dolor", "sit", "amet"]; //private
 			$.extend(this, {			
 				numberOfSections: function(tableview) {					
 					return 1;
 				}, numberOfCellsForSection: function(sectionIndex, tableview) {
+
 - private instance variables may be used to cache the view or its properties.
+
 					myTable = tableview;
 					return cellObjects.length;
 				}, cellAtIndex: function(sectionIndex, cellIndex, tableview) {	
@@ -215,10 +229,14 @@ Following View Controller Protocols
 						});
 					});
 				}, didSelectCell: function(cellIndex) {
+
 - additional views may be linked to a view controller for data output etc.
+
 					this.mySplitViewController.detailView.innerText = cellObjects[cellIndex];
 				}, 
+
 - arbitrary instance variables may be added for dealing with other views.
+
 				mySplitViewController: null
 			});
 		};
