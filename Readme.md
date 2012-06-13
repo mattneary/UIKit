@@ -92,3 +92,27 @@ Getting Started
 			});		
 		});
 	
+Documentation
+=============
+UIViewController
+----------------
+
+UISplitViewController
+---------------------
+- (UIView) willInsertLeftView: function(left) {}
+- (UIView) willInsertRightView: function(right) {}
+- (UIView) willInsertMiddleView: function(middle) {}
+- (UISplitView) mySplitView
+
+UITableViewController
+---------------------
+- (Integer) numberOfSections: function(tableview) {}
+- (Integer) numberOfCellsForSection: function(sectionIndex, tableview) {}
+- (UITableViewCell) cellAtIndex: function(sectionIndex, cellIndex, tableview) {}
+- (void) didSelectCell: function(cellIndex) {}
+
+UINavigationViewController
+--------------------------
+
+UITabBarController
+------------------
