@@ -97,6 +97,7 @@ Documentation - Controllers
 UIViewController
 ----------------
 - (UIView) viewWillLoad: function(view) {}
+
 UISplitViewController
 ---------------------
 - (UIView) viewWillLoad: function(view) {}
@@ -104,6 +105,7 @@ UISplitViewController
 - (UIView) willInsertRightView: function(right) {}
 - (UIView) willInsertMiddleView: function(middle) {}
 - (UISplitView) mySplitView
+
 UITableViewController
 ---------------------
 - (UIView) viewWillLoad: function(view) {}
@@ -111,12 +113,15 @@ UITableViewController
 - (Integer) numberOfCellsForSection: function(sectionIndex, tableview) {}
 - (UITableViewCell) cellAtIndex: function(sectionIndex, cellIndex, tableview) {}
 - (void) didSelectCell: function(cellIndex) {}
+
 UINavigationViewController
 --------------------------
 - TODO
+
 UITabBarViewController
 ----------------------
 - TODO
+
 Documentation - Views
 =====================
 UIView
@@ -125,6 +130,7 @@ UIView
 - (void) init
 - (UIView) sub: function(cb) {}
 - (HTMLElement) view
+
 UISplitView
 -----------
 - (HTMLElement) view
@@ -133,6 +139,7 @@ UISplitView
 - (UIView) leftView 
 - (UIView) middleView
 - (UISplitViewController) delegate
+
 UITableView
 -----------
 - (HTMLElement) view
@@ -140,17 +147,21 @@ UITableView
 - (UITableViewController) delegate
 - (void) reloadData
 - (UITableView) init
+
 UITableViewCell
 ---------------
 - (HTMLElement) view
 - (void) init
+
 UINavigationView
 ----------------
 - TODO
+
 UINavigationBarView
 -------------------
 - (HTMLElement) view
 - (void) init
+
 UITabBarView
 ------------
 - TODO
