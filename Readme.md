@@ -4,6 +4,14 @@ Introduction
 - Views and Controllers are allocated and referenced to each other then the views are initiated and appended to the document body.
 - Views check their delegate for subviews and upon interaction.
 
+MVC
+===
+- Following an MVC architecture in UIKit.js is very natural. 
+- Views are subclasses of UIView, UITableView etc.
+- Controllers are classes that implement protocols in their instances.
+- Models are classes with instance variables and methods that allow for intuitive manipulation of data point(s).
+
+
 App Workflow
 ============
 - Fire app main with UIKit closure i.e., call UIKit.implements(function() {...})
