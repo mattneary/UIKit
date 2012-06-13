@@ -1,6 +1,8 @@
 Introduction
 ============
 - UIKit.js is a JavaScript only web development library that focuses on Object Oriented, cross platform solutions to common structural paradigms.
+- Views and Controllers are allocated and referenced to each other then the views are initiated and appended to the document body.
+- Views check their delegate for subviews and upon interaction.
 
 App Workflow
 ============
