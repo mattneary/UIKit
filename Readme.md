@@ -25,19 +25,19 @@ Getting Started
 ===============
 - Your custom classes can be included as require.js modules
 	
-'''javascript
+```javascript
 requirejs(["./UIKit.js", "./UISplitViewController"], function(UIKit, UISplitViewController) {...});
-'''
+```
 
   and included in calls to UIKit.implements
 
-'''javascript
+```javascript
 UIKit.implements(main, {UISplitViewControlelr: UISplitViewControlelr}); 
-'''
+```
 
 - Usually, a view and controller will be allocated and referenced to each other then the view will be initialized and appended to the document body.
 
-'''javascript
+```javascript
 var main = function() {		
 	var wrapper = new UISplitView();
 	var uisvc = new UISplitViewController();	
@@ -51,12 +51,12 @@ var main = function() {
 		padding: 0, margin: 0
 	}));
 };
-'''	
+```	
 
 - Elements can be modified in the main function, protocol firings to delegates and by simply accessing the subview properties of a view prior to initialization. The stylize and sub prototype functions are most helpful.
 - The stylize function applies CSS to a view with media query conditions as the optional second parameter.
 
-'''javascript
+```javascript
 {
 	willInsertRightView: function(right) {
 		right.stylize({
@@ -65,11 +65,11 @@ var main = function() {
 		return right;
 	}
 }
-'''		
+```		
 
 - The sub function applies a callback to an HTML element or view
 
-'''javascript
+```javascript
 (new UINavigationBar("Tweets")).sub(function() {
 	this.appendChild($.Element("h3").sub(function() {
 		this.innerText = "subtitle";
@@ -78,11 +78,11 @@ var main = function() {
 		background: "#e3e3e3"
 	})
 });
-'''
+```
 
 - Classes should be made as delegates for your views that respond to documented protocols to modify or create views and respond to interaction.
 
-'''javascript
+```javascript
 define(["./UIKit", "jquery"], function(UIKit, jQuery) {
 	return UIKit.implements(function() {
 		var cellObjects, table;
@@ -111,7 +111,7 @@ define(["./UIKit", "jquery"], function(UIKit, jQuery) {
 		return MasterViewController;
 	});		
 });
-'''
+```
 	
 Documentation - Controllers
 ===========================
@@ -204,19 +204,19 @@ Subclassing Views
 =================
 - include dependencies in a requirejs module
 
-'''javascript
+```javascript
 define(["./Foundation", "./UIView"], function($, UIView) {		
-'''
+```
 
 - declare a  constructor for your class
 
-'''javascript
+```javascript
 	var UISplitView = function() {
-'''
+```
 
 - extend the instance with and method or property instance variables.
 
-'''javascript
+```javascript
 		$.extend(this, {
 			view: $.Element("div"),
 			rightView: section(side_length+"px", "right"), 
@@ -225,48 +225,48 @@ define(["./Foundation", "./UIView"], function($, UIView) {
 			delegate: null
 		});
 	}
-'''
+```
 
 - create a prototype with any class methods you would like to add or modify. Note that when modifying the init method, a backup of the default should be fired.
 
-'''javascript
+```javascript
 	UISplitView.prototype = {
 		init: function() {
 			this._init();	//init super: fires viewWillLoad on delegate
 			//do other shit
 		}
 	};
-'''
+```
 
 - extend the prototype with that of a parent class for inheritance, values will not be overwritten.
 
-'''javascript
+```javascript
 	$.extend(UISplitView.prototype, UIView.prototype);
-'''
+```
 
 - return the constructor (i.e., class) as the requirejs module
 
-'''javascript
+```javascript
 	return UISplitView;
 });
-'''
+```
 
 Following View Controller Protocols
 ===================================
 - the view controller constructor should add instance methods that can be called by the view which it controls.
 
-'''javascript
+```javascript
 var MasterViewController = function() {
 	var cellObjects = ["lorum", "ipsum", "dolor", "sit", "amet"]; //private
 	$.extend(this, {			
 		numberOfSections: function(tableview) {					
 			return 1;
 		}, numberOfCellsForSection: function(sectionIndex, tableview) {
-'''
+```
 
 - private instance variables may be used to cache the view or its properties.
 
-'''javascript
+```javascript
 			myTable = tableview;
 			return cellObjects.length;
 		}, cellAtIndex: function(sectionIndex, cellIndex, tableview) {	
@@ -278,19 +278,19 @@ var MasterViewController = function() {
 				});
 			});
 		}, didSelectCell: function(cellIndex) {
-'''
+```
 
 - additional views may be linked to a view controller for data output etc.
 
-'''javascript
+```javascript
 			this.mySplitViewController.detailView.innerText = cellObjects[cellIndex];
 		}, 
-'''
+```
 
 - arbitrary instance variables may be added for dealing with other views.
 
-'''javascript
+```javascript
 		mySplitViewController: null
 	});
 };
-'''
+```
